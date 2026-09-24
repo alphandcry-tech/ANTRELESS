@@ -5,10 +5,10 @@
 }
 
 :root {
-  --dark: #101012;
-  --dark-soft: #1c1c1f;
-  --green: #9ADB35;
-  --amber: #E4A93F;
+  --background: #ffffff;
+  --Antre text: #1c1c1f;
+  --Less text: #9ADB35;
+  --nav bg: #E4A93F;
   --amber-text: #4a3413;
   --bg: #ffffff;
   --text: #17171a;
@@ -37,7 +37,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background: var(--dark);
-  padding: 14px 24px;
+  width: 100%;
+  padding: 7px 7px;
   gap: 16px;
 }
 
@@ -63,8 +64,8 @@ body {
 }
 
 .avatar {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: #e7e8ee;
   display: flex;
@@ -82,7 +83,7 @@ body {
 .user-name {
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 4px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -95,8 +96,8 @@ body {
 .brand {
   flex: 1;
   text-align: center;
-  font-family: 'Anton', sans-serif;
-  font-size: 30px;
+  font-family: 'freshman';
+  font-size: 55px;
   letter-spacing: 0.5px;
   color: #fff;
   white-space: nowrap;
