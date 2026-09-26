@@ -1,0 +1,372 @@
+@font-face {
+  font-family: 'Freshman';
+  src: url('font/Freshman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KOMIKAX_';
+  src: url('font/KOMIKAX_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('font/IntelOneMono-Regular.woff2') format('woff2'),
+    url('font/IntelOneMono-_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('font/IntelOneMono-italic.woff2') format('woff2'),
+    url('font/IntelOneMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: Italic;
+}
+
+@font-face {
+  font-family: 'Jersey25';
+   src: url('font/Jersey25-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* NAVBAR + shared tokens (samakan dengan index.css) */
+:root {
+  --background: #f8fafc;
+  --Antre-text: #ffffff;
+  --Less-text: #9ADB35;
+  --nav-bg: #0f3d2e;
+  --konfirmasi-bg: #10B981;
+  --amber-text: #D97706;
+  --text: #000000;
+  --muted: #ffffff;
+  --border: #ececec;
+  --placeholder: #9aa0ab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Freshman', 'KOMIKAX_', sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--nav-bg);
+  padding: 15px clamp(16px, 4vw, 60px);
+}
+
+.btn-back {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e7e8ee;
+  flex-shrink: 0;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand {
+  font-family: 'Freshman', 'KOMIKAX_', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--Antre-text);
+  white-space: nowrap;
+}
+
+.brand .accent {
+  color: var(--Less-text);
+}
+
+/* ================= AUTH CONTENT ================= */
+.auth-main {
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px 64px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 32px 28px;
+}
+
+@media (max-width: 460px) {
+  .auth-card {
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+}
+
+.auth-title {
+  font-family: 'Jersey25', monospace;
+  font-size: 30px;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.auth-subtitle {
+  font-family: 'Intel One Mono', monospace;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-family: 'Jersey25', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0 12px;
+  transition: border-color 0.15s ease;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--konfirmasi-bg);
+}
+
+.input-icon {
+  color: #9aa0ab;
+  flex-shrink: 0;
+}
+
+.input-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 10px;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 13.5px;
+  color: var(--text);
+}
+input-wrap input::placeholder {
+  color: var(--placeholder);
+}
+
+.btn-eye {
+  border: none;
+  background: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #9aa0ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-eye .eye-closed {
+  display: none;
+}
+
+.btn-eye.is-visible .eye-open {
+  display: none;
+}
+
+.btn-eye.is-visible .eye-closed {
+  display: block;
+}
+
+.link-forgot {
+  display: inline-block;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 12px;
+  color: var(--amber-text);
+  text-decoration: none;
+  margin: 0 0 20px;
+}
+
+.link-forgot:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  background: var(--konfirmasi-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 6px;
+  font-family: 'Jersey25', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.btn-submit:hover {
+  filter: brightness(0.95);
+}
+
+.auth-links {
+  text-align: center;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 12px;
+  margin: 16px 0 0;
+  color: #6b7280;
+}
+
+.auth-links a {
+  color: var(--amber-text);
+  text-decoration: none;
+}
+
+.auth-links .plain-text {
+  color: #9aa0ab;
+  cursor: default;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+.auth-links .dot {
+  margin: 0 8px;
+  color: #c8cbd2;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 26px 0 18px;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 11.5px;
+  color: #9aa0ab;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 12.5px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn-social:hover {
+  background: #f8fafc;
+}
+
+.auth-footer {
+  text-align: center;
+  font-family: 'Intel One Mono', monospace;
+  font-size: 12.5px;
+  color: #6b7280;
+  margin: 22px 0 0;
+}
+
+.auth-footer a {
+  color: var(--amber-text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 460px) {
+  .brand {
+    font-size: 22px;
+  }
+
+  .auth-main {
+    padding: 32px 16px 48px;
+  }
+}

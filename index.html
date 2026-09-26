@@ -10,209 +10,196 @@
 </head>
 
 <body>
-    <!-- start header -->
-     <!-- navbar -->
+    <body>
+    <div class="page">
 
-    <header>
-      <header class="navbar">
-        <div class="nav-left">
-<a class="btn-back" href="login-page.html" aria-label="Kembali">
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M10 8V4L2 12l8 8v-4.2c5.6 0 9.3 1.5 12 5.2-1-6.6-4.6-12.2-12-13z"/>
-  </svg>
-</a>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar">
+            <div class="nav-left">
+                <a class="btn-back" href="login.html" aria-label="Kembali">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M10 8V4L2 12l8 8v-4.2c5.6 0 9.3 1.5 12 5.2-1-6.6-4.6-12.2-12-13z" />
+                    </svg>
+                </a>
 
-<!-- logo akun -->
- <div class="Avatar" aria-hidden="true">
-  <img src="asset/profil/icon profil kosong.png" alt="foto profil" width="30" height="30">
-</div>
+                <!-- logo akun -->
+                <div class="avatar" aria-hidden="true">
+                    <img src="asset/profil/icon profil kosong.png" alt="foto profil">
+                </div>
 
-<!-- Username & email -->
+                <!-- Username & email -->
+                <div class="user-info">
+                    <p class="user-name">Syifa'ul</p>
+                    <p class="user-email">mys***@example.com</p>
+                </div>
+            </div>
 
-<div class="user-info">
-    <div class="user-info">
-        <p class="username">Syifa'ul</p>
-        <p class="email">mys***@example.com</p>
+            <!-- logo AntreLess -->
+            <div class="brand">Antre<span class="accent">Less</span></div>
+
+            <!-- Tombol keranjang -->
+            <div class="nav-right">
+                <a class="btn-cart" href="cart.html" aria-label="Buka keranjang">
+                    <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                        <path d="M4 8h6l6 22h20l5-16H13" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="19" cy="39" r="3" fill="#6cc12f" />
+                        <circle cx="35" cy="39" r="3" fill="#6cc12f" />
+                    </svg>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ================= MAIN ================= -->
+        <main>
+            <div class="content">
+                <h1 class="section-title">Daftar makanan &amp; Minuman</h1>
+
+                <!-- Merchant 1 -->
+                <section class="merchant">
+                    <div class="merchant-info">
+                        <img class="merchant-logo" src="asset/dapur rasa/logodapurrasa.jpeg"
+                            alt="Logo Kantin Dapur Rasa">
+                        <div>
+                            <div class="merchant-label">Kantin</div>
+                            <h2 class="merchant-name">Dapur Rasa</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid">
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/dapur rasa/geprek.jpeg" alt="Nasi Geprek">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nasi Geprek</h3>
+                                <span class="card-price">10.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/dapur rasa/nasikuning.jpeg" alt="Nasi Kuning">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nasi Kuning</h3>
+                                <span class="card-price">12.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/dapur rasa/pecel.jpeg" alt="Nasi Pecel">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Nasi Pecel</h3>
+                                <span class="card-price">8.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Merchant 2 -->
+                <section class="merchant">
+                    <div class="merchant-info">
+                        <img class="merchant-logo" src="asset/kedai teguk/logokedaiteguk.jpeg"
+                            alt="Logo Kantin Kedai Teguk">
+                        <div>
+                            <div class="merchant-label">Kantin</div>
+                            <h2 class="merchant-name">Kedai Teguk</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid">
+                        <article class="card">
+                            <div class="card-img drink">
+                                <img src="asset/kedai teguk/esteh.jpeg" alt="Es Teh">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Es Teh</h3>
+                                <span class="card-price">3.500</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img drink">
+                                <img src="asset/kedai teguk/esmacha.jpeg" alt="Es Macha">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Es Macha</h3>
+                                <span class="card-price">8.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img drink">
+                                <img src="asset/kedai teguk/ThaiTea.jpeg" alt="Es Thai Tea">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Es Thai Tea</h3>
+                                <span class="card-price">5.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+                    </div>
+                    </section>
+
+                <!-- Merchant 3 -->
+                <section class="merchant">
+                    <div class="merchant-info">
+                        <img class="merchant-logo" src="asset/pojok kudapan/logopojokkudapan.jpeg"
+                            alt="Logo Kantin Pojok Kudapan">
+                        <div>
+                            <div class="merchant-label">Kantin</div>
+                            <h2 class="merchant-name">Pojok Kudapan</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid">
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/pojok kudapan/risolkuningsolo.jpeg" alt="Sosis Kuning Solo">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Sosis Kuning Solo</h3>
+                                <span class="card-price">3.500</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/pojok kudapan/cireng.jpeg" alt="Cireng">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Cireng</h3>
+                                <span class="card-price">1.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="asset/pojok kudapan/dimsum.jpeg" alt="Dimsum Mentai">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-name">Dimsum Mentai</h3>
+                                <span class="card-price">10.000</span>
+                            </div>
+                            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
-</div>
 
-<!-- logo AntreLess -->
- <div class="brand">Antre<span class="accent">Less</span></div>
-
-   <!-- Tombol keranjang -->
-    <div class="nav-right">
-  <a class="btn-cart" href="cart.html" aria-label="Buka keranjang">
-    <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <path d="M4 8h6l6 22h20l5-16H13" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="19" cy="39" r="3" fill="#6cc12f"/>
-      <circle cx="35" cy="39" r="3" fill="#6cc12f"/>
-    </svg>
-  </a>
-</div>
-    
-    </header>
-    <!-- end header -->
-
-<!-- section -->
-
-
-    <!-- start main -->
-    <main>
-        <!-- section main pertama daftar makanan dan minuman -->
-         <h1 class="section-title">Daftar makanan &amp; Minuman</h1>
-
-        
-
-        <!-- section main kedua -->
-        <section class="merchant">
-            <!-- isinya merchant logo kantin, kantin apa, menu-menu -->
-             <!-- Merchant 1 -->
-            <section class="merchant">
-        <!-- Info merchant -->
-        <div class="merchant-info">
-          <img class="merchant-logo" src="asset/dapur rasa/logodapurrasa.jpeg" alt="Logo Kantin Dapur Rasa" width="56" height="56">
-          <div>
-            <div class="merchant-label">Kantin</div>
-            <h2 class="merchant-name">Dapur Rasa</h2>
-          </div>
-        </div>
-
-        <!-- grid kartu 1 -->
-         <!-- Grid kartu -->
-        <div class="grid">
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/dapur rasa/geprek.jpeg" alt="Nasi Geprek" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Nasi Geprek</h3>
-              <span class="card-price">10.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/dapur rasa/nasikuning.jpeg" alt="Nasi Kuning" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Nasi Kuning</h3>
-              <span class="card-price">12.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/dapur rasa/pecel.jpeg" alt="Nasi Pecel" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Nasi Pecel</h3>
-              <span class="card-price">8.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-        </div>
-      </section>
-
-      <!-- Merchant 2 -->
-        
-       <section class="merchant">
-        <div class="merchant-info">
-          <img class="merchant-logo" src="asset/kedai teguk/logokedaiteguk.jpeg" alt="Logo Kantin Kedai Teguk" width="56" height="56">
-          <div>
-            <div class="merchant-label">Kantin</div>
-            <h2 class="merchant-name">Kedai Teguk</h2>
-          </div>
-        </div>
-
-        <!-- grid kartu 2 -->
-         <!-- Grid kartu -->
-        <div class="grid">
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/kedai teguk/esteh.jpeg" alt="Es Teh" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Es Teh</h3>
-              <span class="card-price">3.500</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/kedai teguk/esmacha.jpeg" alt="Es Macha" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Es Macha</h3>
-              <span class="card-price">8.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/kedai teguk/ThaiTea.jpeg" alt="Es Thai Tea" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Es Thai Tea</h3>
-              <span class="card-price">5.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-        </div>
-      </section>
-
-      <!-- merchant 3 -->
-        <section class="merchant">
-        <div class="merchant-info">
-          <img class="merchant-logo" src="asset/pojok kudapan/logopojokkudapan.jpeg" alt="Logo Kantin Pojok Kudapan" width="56" height="56">
-          <div>
-            <div class="merchant-label">Kantin</div>
-            <h2 class="merchant-name">Pojok Kudapan</h2>
-          </div>
-        </div>
-        
-        <!-- grid kartu 3 -->
-         <!-- Grid kartu -->
-
-        <div class="grid">
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/pojok kudapan/risolkuningsolo.jpeg" alt="Sosis Kuning Solo" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Sosis Kuning Solo</h3>
-              <span class="card-price">3.500</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/pojok kudapan/cireng.jpeg" alt="Cireng" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Cireng</h3>
-              <span class="card-price">1.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-
-          <article class="card">
-            <div class="card-img">
-              <img src="asset/pojok kudapan/dimsum.jpeg" alt="Dimsum Mentai" width="90">
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">Dimsum Mentai</h3>
-              <span class="card-price">10.000</span>
-            </div>
-            <button class="btn-add" type="button">Tambahkan Ke Keranjang</button>
-          </article>
-        </div>
-      </section>
-    </section>
-</div>
+    <script src="index.js" defer></script>
 </body>
 </html>

@@ -6,125 +6,126 @@
     <link rel="stylesheet" href="cart.css">
     <title>AntreLess - Keranjang</title>
 </head>
-
 <body>
-    <div class="page">
+    <div class="page page-cart">
 
         <!-- Navbar -->
         <header class="navbar">
-      <div class="nav-left">
-        <!-- Tombol back (kembali ke halaman 1) -->
-        <a class="btn-back" href="index.html" aria-label="Kembali">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M10 8V4L2 12l8 8v-4.2c5.6 0 9.3 1.5 12 5.2-1-6.6-4.6-12.2-12-13z"/>
-          </svg>
-        </a>
+            <div class="nav-left">
+                <!-- Tombol back (kembali ke halaman 1) -->
+                <a class="btn-back" href="index.html" aria-label="Kembali">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M10 8V4L2 12l8 8v-4.2c5.6 0 9.3 1.5 12 5.2-1-6.6-4.6-12.2-12-13z" />
+                    </svg>
+                </a>
+                 <!-- Logo AntreLess -->
+                <div class="brand">Antre<span class="accent">Less</span></div>
+            </div>
 
+            <!-- Ikon keranjang (statis, karena sudah di halaman keranjang) -->
+            <div class="nav-right">
+                <span class="btn-cart" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                        <path d="M4 8h6l6 22h20l5-16H13" stroke="#f2f2f2" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <circle cx="19" cy="39" r="3" fill="#6cc12f" />
+                        <circle cx="35" cy="39" r="3" fill="#6cc12f" />
+                    </svg>
+                </span>
+            </div>
+        </header>
 
-        <!-- Logo AntreLess -->
-        <div class="brand">Antre<span class="accent">Less</span></div>
-      </div>
+        <main class="content">
 
+            <!-- judul Section -->
+            <h1 class="section-title">Konfirmasi Pesanan</h1>
 
-      <!-- Tombol keranjang -->
-      <div class="nav-right">
-          <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M4 8h6l6 22h20l5-16H13" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="19" cy="39" r="3" fill="#6cc12f"/>
-            <circle cx="35" cy="39" r="3" fill="#6cc12f"/>
-          </svg>
-        </a>
-      </div>
-    </header>
+            <!-- Grid kartu pesanan konfirmasi -->
+            <section class="order-list" aria-label="Daftar pesanan">
 
-    <main class="content">
+                <article class="order-card" data-price="10000">
+                    <img class="order-img" src="asset/dapur rasa/geprek.jpeg" alt="Nasi Geprek" width="80">
+                    <div class="order-info">
+                        <h2 class="order-name">Nasi Geprek</h2>
+                        <span class="order-price">10.000</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="btn-plus" type="button" aria-label="Tambah Nasi Geprek">+</button>
+                        <input class="qty" type="text" value="0" readonly aria-label="Jumlah Nasi Geprek">
+                        <button class="btn-minus" type="button" aria-label="Kurangi Nasi Geprek">&minus;</button>
+                    </div>
+                </article>
 
-        <!-- judul Section -->
-         <h1 class="section-title">Konfirmasi Pesanan</h1>
+                <article class="order-card" data-price="12000">
+                    <img class="order-img" src="asset/dapur rasa/nasikuning.jpeg" alt="Nasi Kuning" width="80">
+                    <div class="order-info">
+                        <h2 class="order-name">Nasi Kuning</h2>
+                        <span class="order-price">12.000</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="btn-plus" type="button" aria-label="Tambah Nasi Kuning">+</button>
+                        <input class="qty" type="text" value="0" readonly aria-label="Jumlah Nasi Kuning">
+                        <button class="btn-minus" type="button" aria-label="Kurangi Nasi Kuning">&minus;</button>
+                    </div>
+                </article>
 
-         <!-- Grid kartu pesanan konfirmasi -->
+                <article class="order-card" data-price="5000">
+                    <img class="order-img" src="asset/kedai teguk/ThaiTea.jpeg" alt="Es Thai Tea" width="80">
+                    <div class="order-info">
+                        <h2 class="order-name">Es Thai Tea</h2>
+                        <span class="order-price">5.000</span>
+                    </div>
+                     <div class="qty-control">
+                        <button class="btn-plus" type="button" aria-label="Tambah Es Thai Tea">+</button>
+                        <input class="qty" type="text" value="0" readonly aria-label="Jumlah Es Thai Tea">
+                        <button class="btn-minus" type="button" aria-label="Kurangi Es Thai Tea">&minus;</button>
+                    </div>
+                </article>
 
-         <section class="order-list" aria-label="Daftar pesanan">
+                <article class="order-card" data-price="3500">
+                    <img class="order-img" src="asset/kedai teguk/esteh.jpeg" alt="Es Teh" width="80">
+                    <div class="order-info">
+                        <h2 class="order-name">Es Teh</h2>
+                        <span class="order-price">3.500</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="btn-plus" type="button" aria-label="Tambah Es Teh">+</button>
+                        <input class="qty" type="text" value="0" readonly aria-label="Jumlah Es Teh">
+                        <button class="btn-minus" type="button" aria-label="Kurangi Es Teh">&minus;</button>
+                    </div>
+                </article>
 
-        <article class="order-card" data-price="10000">
-          <img class="order-img" src="asset/dapur rasa/geprek.jpeg" alt="Nasi Geprek" width="80">
-          <div class="order-info">
-            <h2 class="order-name">Nasi Geprek</h2>
-            <span class="order-price">10.000</span>
-          </div>
-          <div class="qty-control">
-            <button class="btn-plus" type="button" aria-label="Tambah Nasi Geprek">+</button>
-            <input class="qty" type="text" value="0" readonly aria-label="Jumlah Nasi Geprek">
-            <button class="btn-minus" type="button" aria-label="Kurangi Nasi Geprek">&minus;</button>
-          </div>
-        </article>
+                <article class="order-card" data-price="3500">
+                    <img class="order-img" src="asset/pojok kudapan/risolkuningsolo.jpeg" alt="Sosis Kuning Solo"
+                        width="80">
+                    <div class="order-info">
+                        <h2 class="order-name">Sosis Kuning Solo</h2>
+                        <span class="order-price">3.500</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="btn-plus" type="button" aria-label="Tambah Sosis Kuning Solo">+</button>
+                        <input class="qty" type="text" value="0" readonly aria-label="Jumlah Sosis Kuning Solo">
+                        <button class="btn-minus" type="button" aria-label="Kurangi Sosis Kuning Solo">&minus;</button>
+                    </div>
+                </article>
 
-        <article class="order-card" data-price="12000">
-          <img class="order-img" src="asset/dapur rasa/nasikuning.jpeg" alt="Nasi Kuning" width="80">
-          <div class="order-info">
-            <h2 class="order-name">Nasi Kuning</h2>
-            <span class="order-price">12.000</span>
-          </div>
-          <div class="qty-control">
-            <button class="btn-plus" type="button" aria-label="Tambah Nasi Kuning">+</button>
-            <input class="qty" type="text" value="0" readonly aria-label="Jumlah Nasi Kuning">
-            <button class="btn-minus" type="button" aria-label="Kurangi Nasi Kuning">&minus;</button>
-          </div>
-        </article>
+            </section>
+        </main>
 
-        <article class="order-card" data-price="5000">
-          <img class="order-img" src="asset/kedai teguk/ThaiTea.jpeg" alt="Es Thai Tea" width="80">
-          <div class="order-info">
-            <h2 class="order-name">Es Thai Tea</h2>
-            <span class="order-price">5.000</span>
-          </div>
-          <div class="qty-control">
-            <button class="btn-plus" type="button" aria-label="Tambah Es Thai Tea">+</button>
-            <input class="qty" type="text" value="0" readonly aria-label="Jumlah Es Thai Tea">
-            <button class="btn-minus" type="button" aria-label="Kurangi Es Thai Tea">&minus;</button>
-          </div>
-        </article>
-         <article class="order-card" data-price="3500">
-          <img class="order-img" src="asset/kedai teguk/esteh.jpeg" alt="Es Teh" width="80">
-          <div class="order-info">
-            <h2 class="order-name">Es Teh</h2>
-            <span class="order-price">3.500</span>
-          </div>
-          <div class="qty-control">
-            <button class="btn-plus" type="button" aria-label="Tambah Es Teh">+</button>
-            <input class="qty" type="text" value="0" readonly aria-label="Jumlah Es Teh">
-            <button class="btn-minus" type="button" aria-label="Kurangi Es Teh">&minus;</button>
-          </div>
-        </article>
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Section total -->
+            <div class="total">
+                <span class="total-label">Total</span>
+                <output class="total-value" id="totalValue">0</output>
+            </div>
 
-        <article class="order-card" data-price="3500">
-          <img class="order-img" src="asset/pojok kudapan/risolkuningsolo.jpeg" alt="Sosis Kuning Solo" width="80">
-          <div class="order-info">
-            <h2 class="order-name">Sosis Kuning Solo</h2>
-            <span class="order-price">3.500</span>
-          </div>
-          <div class="qty-control">
-            <button class="btn-plus" type="button" aria-label="Tambah Sosis Kuning Solo">+</button>
-            <input class="qty" type="text" value="0" readonly aria-label="Jumlah Sosis Kuning Solo">
-            <button class="btn-minus" type="button" aria-label="Kurangi Sosis Kuning Solo">&minus;</button>
-          </div>
-        </article>
+            <!-- Tombol bayar -->
+            <a class="btn-pay" href="succes.html">Bayar</a>
+        </footer>
 
-      </section>
-    </main>
-
-    <!-- Footer -->
-<footer class="footer">
-      <!-- Section total -->
-      <div class="total">
-        <span class="total-label">Total</span>
-        <output class="total-value" id="totalValue">0</output>
-      </div>
-
-      <!-- Tombol bayar -->
-      <a class="btn-pay" href="succes.html">Bayar</a>
-
-    </footer>
-
+    </div>
+    <script src="cart.js" defer></script>
 </body>
+
 </html>

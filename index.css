@@ -1,51 +1,82 @@
 @font-face {
-  font-family: 'NamaFontKamu';
-  src: url('font/NamaFont.ttf') format('truetype');
+  font-family: 'Freshman';
+  src: url('font/Freshman.ttf') format('truetype');
   font-weight: normal;
-}
-/* NAVBAR */
-:root  {
-  --background: #ffffff;
-  --Antre-text: #f8fafc;
-  --Less-text: #9ADB35;
-  --nav-bg: #0f3d2e;
-  --amber-text: #4a3413;
-  --text: #17171a;
-  --muted: #ffffff;
+  font-style: normal;
 }
 
-* { box-sizing: border-box; }
+@font-face {
+  font-family: 'KOMIKAX_';
+  src: url('font/KOMIKAX_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('font/IntelOneMono-Regular.woff2') format('woff2'),
+    url('font/IntelOneMono-_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('font/IntelOneMono-italic.woff2') format('woff2'),
+    url('font/IntelOneMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: Italic;
+}
+@font-face {
+  font-family: 'Jersey25';
+  src: url('font/Jersey25-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* NAVBAR */
+:root  {
+  --background: #f8fafc;
+  --Antre-text: #ffffff;
+  --Less-text: #9ADB35;
+  --nav-bg: #0f3d2e;
+  --konfirmasi-bg: #10B981;
+  --amber-text: #D97706;
+  --text: #000000;
+  --muted: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Freshman', 'KOMIKAX_';
+  font-family: 'Freshman', 'KOMIKAX_', sans-serif;
   background: var(--background);
   color: var(--text);
 }
 
 .page {
-  max-width: 1040px;
-  margin: 0 auto;
+  width: 100%;
   background: var(--background);
   min-height: 100vh;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  position: relative;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   background: var(--nav-bg);
-  height: 100px;
-  padding: 0px 20px;
+  padding: 15px clamp(16px, 4vw, 60px);
+  gap: 16px;
 }
 
 .nav-left {
   display: flex;
-  min-width: 0;
   align-items: center;
   gap: 12px;
-  flex: 1;
+  min-width: 0;
 }
 
 .btn-back {
@@ -63,82 +94,129 @@ body {
 }
 
 .avatar {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #e7e8ee;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
+/* FIX: gambar profil sekarang otomatis mengikuti besar wadah .avatar */
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
 .user-info {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  justify-content: center;
+  gap: 2px;
+  /* FIX: jarak nama & email diatur di sini, bukan lewat margin <p> */
 }
 
 .user-name {
+  margin: 0;
+ 
   color: #ffffff;
   font-weight: 700;
-  margin-bottom: 1.1px;
-  font-size: 4px;
+  font-size: 12px;
+  /* FIX: sebelumnya 4px (typo, kegedean/kekecilan) */
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
 
 .user-email {
+  margin: 0;
+  /* FIX: reset margin default <p> */
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .brand {
-  grid-column: 2;
-  flex: 1;
-  text-align: center;
-  font-family: 'freshman';
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Freshman', 'KOMIKAX_', sans-serif;
   font-size: 50px;
   line-height: 1;
   letter-spacing: 0.5px;
-  color : var(--Antre-text);
+  color: var(--Antre-text);
   white-space: nowrap;
+  pointer-events: none;
 }
 
-.brand .accent { color: var(--Less-text); }
+.brand .accent {
+  color: var(--Less-text);
+}
 
 .nav-right {
-  grid-column: 3;
-  width: 100%;
   display: flex;
-  min-width: 0;\
   align-items: center;
   justify-content: flex-end;
-
 }
-
 .btn-cart {
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
   padding: 4px;
+  display: inline-flex;
 }
 
-.btn-cart svg path { stroke: #f2f2f2; }
+.btn-cart svg path {
+  stroke: #f2f2f2;
+}
+
 .btn-cart svg {
   width: 40px;
   height: 40px;
 }
 
+/* Badge jumlah item di ikon keranjang */
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.cart-badge.show {
+  transform: scale(1);
+}
+
 /* ================= CONTENT ================= */
 .content {
-  padding: 22px 24px 48px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 22px clamp(16px, 4vw, 60px) 48px;
 }
 
 .section-title {
   display: inline-block;
-  background: var(--dark);
-  color: var(--green);
+  font-family: 'Freshman'sans-serif;
+  background: var(--nav-bg);
+  color: var(--Less-text);
   font-size: 14px;
   font-weight: 600;
   padding: 9px 20px;
@@ -146,7 +224,9 @@ body {
   margin: 0 0 22px;
 }
 
-.merchant { margin-bottom: 30px; }
+.merchant {
+  margin-bottom: 30px;
+}
 
 .merchant-info {
   display: flex;
@@ -167,6 +247,7 @@ body {
 .merchant-label {
   font-size: 11px;
   color: #8c8f9e;
+  font-family: 'Jersey25', monospace;
 }
 
 .merchant-name {
@@ -175,11 +256,12 @@ body {
   font-weight: 700;
   color: var(--text);
   text-transform: capitalize;
+  font-family: 'Jersey25', monospace;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
 }
 
@@ -188,7 +270,7 @@ body {
   border: 1px solid #ececec;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -197,9 +279,21 @@ body {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #f0f0f0;
-}
+  background: #f8fafc;
 
+}
+.card-img.drink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+.card-img.drink img{
+  width: 55%;
+  height: 80%;
+  object-fit: contain;
+  margin:auto;
+}
 .card-img img {
   width: 100%;
   height: 100%;
@@ -221,11 +315,13 @@ body {
   font-weight: 700;
   color: var(--text);
   line-height: 1.25;
+  font-family: 'Jersey25', monospace;
 }
 
 .card-price {
   font-size: 13.5px;
   font-weight: 600;
+  font-family: 'Jersey25', monospace;
   color: var(--text);
   white-space: nowrap;
 }
@@ -234,8 +330,8 @@ body {
   display: block;
   width: calc(100% - 20px);
   margin: 0 10px 10px;
-  background: var(--amber);
-  color: var(--amber-text);
+  background: var(--amber-text);
+  color: var(--text);
   border: none;
   border-radius: 6px;
   padding: 9px 6px;
@@ -243,19 +339,44 @@ body {
   font-size: 11.5px;
   font-weight: 600;
   cursor: pointer;
-  transition: filter 0.15s ease;
+  transition: filter 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
-.btn-add:hover { filter: brightness(0.95); }
+.btn-add:hover {
+  filter: brightness(0.95);
+}
+
+/* Feedback singkat saat item berhasil ditambahkan (lihat index.js) */
+.btn-add.added {
+  background: var(--konfirmasi-bg);
+  color: #fff;
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 720px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-  .brand { font-size: 22px; }
-  .user-info { display: none; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .user-info {
+    display: none;
+  }
 }
 
 @media (max-width: 460px) {
-  .grid { grid-template-columns: 1fr; }
-  .navbar { padding: 12px 16px; }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
 }
